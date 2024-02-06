@@ -1,13 +1,33 @@
-import css from './Counter.module.css'
+import React, { Component } from 'react';
+import css from './Counter.module.css';
 
-export const Counter = () => {
-  return (
-    <div className={css.container}>
-      <span className={css.result}>0</span>
-      <div className={css.wrapper}>
-        <button className={css.btn}>Додати +1</button>
-        <button className={css.btn}>Забрати -1</button>
+export class Counter extends Component {
+  
+  state = {
+    result: this.props.initState,
+  };
+
+  increment = () => {
+    this.setState(prevState => ({
+      result: prevState.result + 1
+    }))
+  };
+
+  decrement = () => {
+    this.setState(prevState => ({
+       result: prevState.result - 1
+    }));
+  };
+
+  render() {
+    return (
+      <div className={css.container}>
+        <span className={css.result}>{this.state.result}</span>
+        <div className={css.wrapper}>
+          <button className={css.btn} onClick={this.increment} >Додати +1</button>
+          <button className={css.btn} onClick={this.decrement} >Забрати -1</button>
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
