@@ -1,7 +1,7 @@
 import { PageTitle } from './PageTitle/PageTitle';
 import { EventBoard } from './EventBord/EventBord';
 import { Counter } from './Counter/Counter';
-import { For, Form } from './Form/Form';
+import { Form } from './Form/Form';
 import css from './App.module.css';
 import events from '../data/events.json';
 import { Component } from 'react';
@@ -10,7 +10,7 @@ const initState = 10;
 
 class App extends Component {
   state = {
-    
+
   };
 
   fornSubmitData = data => {
