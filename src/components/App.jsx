@@ -9,9 +9,7 @@ import { Component } from 'react';
 const initState = 10;
 
 class App extends Component {
-  state = {
-
-  };
+  state = {};
 
   fornSubmitData = data => {
     console.log(data);
