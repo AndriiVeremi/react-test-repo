@@ -7,29 +7,33 @@ import { ContactForm } from '../ContactForm/ContactForm';
 import { ContactList } from '../ContactList/ContactList';
 import { ContactFilter } from '../ContactFilter/ContactFilter';
 import { Container, Title, Span, SubTitle, Text } from './App.styled';
+import { useDispatch, useSelector } from 'react-redux';
+import { newContacts, delContacts } from 'store/contacts/actions';
 
 export const App = () => {
-  const [contacts, setContacts] = useState(() => {
-    return JSON.parse(window.localStorage.getItem('contacts')) ?? [];
-  });
 
   const [filter, setFilter] = useState('');
+
+  const contacts = useSelector((state) => state.contacts)
+  const dispatch = useDispatch()
+
 
   useEffect(() => {
     window.localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
 
   const addContacts = data => {
+
     const newContact = {
       id: nanoid(),
       ...data,
     };
 
     if (
-      contacts.find(
+      contacts.contacts.find(
         contact =>
-          contact.name.toLocaleLowerCase() ===
-          newContact.name.toLocaleLowerCase()
+          contact.name.toLowerCase() ===
+          newContact.name.toLowerCase()
       )
     ) {
       return Report.failure(
@@ -41,26 +45,32 @@ export const App = () => {
       Notify.success(`You added a new contact: ${newContact.name}`);
     }
 
-    setContacts(contacts => [newContact, ...contacts]);
+    // setContacts(contacts => [newContact, ...contacts]);
+    dispatch(newContacts(newContact))
   };
 
-  const findContacts = e => {
-    setFilter(e.currentTarget.value.toLowerCase());
-  };
+  // const findContacts = e => {
+  //   setFilter(e.currentTarget.value.toLowerCase());
+  // };
+
+  // const deleteContacts = id => {
+  //   setContacts(prevState => prevState.filter(user => user.id !== id));
+  //   Notify.success('Contact successfully deleted.');
+  // };
 
   const deleteContacts = id => {
-    setContacts(prevState => prevState.filter(user => user.id !== id));
+    dispatch(delContacts(id))
     Notify.success('Contact successfully deleted.');
   };
 
-  const viewContacts = () => {
-    const normalizedFilter = filter.toLowerCase();
-    return contacts.filter(contact =>
-      contact.name.toLowerCase().includes(normalizedFilter)
-    );
-  };
+  // const viewContacts = () => {
+  //   const normalizedFilter = filter.toLowerCase();
+  //   return contacts.filter(contact =>
+  //     contact.name.toLowerCase().includes(normalizedFilter)
+  //   );
+  // };
 
-  const visibleContacts = viewContacts();
+  // const visibleContacts = viewContacts();
 
   return (
     <Container>
@@ -72,12 +82,13 @@ export const App = () => {
       </Title>
       <ContactForm setContacts={addContacts} />
       <SubTitle>Contacts List</SubTitle>
-      <ContactFilter value={filter} findContacts={findContacts} />
-
-      {visibleContacts.length === 0 ? (
+      <ContactFilter />
+      {/* <ContactFilter value={filter} findContacts={findContacts} /> */}
+      {contacts.contacts.length === 0 ? (
         <Text>Sorry, you don't have any contacts.</Text>
       ) : (
-        <ContactList data={visibleContacts} deleteContacts={deleteContacts} />
+        // <ContactList data={visibleContacts} deleteContacts={deleteContacts} />
+        <ContactList data={contacts.contacts} deleteContacts={deleteContacts}/>
       )}
     </Container>
   );

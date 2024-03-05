@@ -1,3 +1,3 @@
-export const filterReducer = (filter) => {
-    return filter
+export const filterReducer = (state = { filter: [] }, { payload, type }) => {
+    return state
   };
