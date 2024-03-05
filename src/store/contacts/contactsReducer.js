@@ -4,8 +4,6 @@ const initialState = { contacts: [] };
 
 export const contactsReducer = (state, { payload, type }) => {
 
-console.log('contStat',state)
-
   switch (type) {
     case ADD_CONTACT:
       return {

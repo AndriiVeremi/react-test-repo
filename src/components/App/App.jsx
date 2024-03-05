@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { nanoid } from 'nanoid';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { Report } from 'notiflix/build/notiflix-report-aio';
@@ -12,11 +12,10 @@ import { newContacts, delContacts } from 'store/contacts/actions';
 
 export const App = () => {
 
-  const [filter, setFilter] = useState('');
+  // const [filter, setFilter] = useState('');
 
   const contacts = useSelector((state) => state.contacts)
   const dispatch = useDispatch()
-
 
   useEffect(() => {
     window.localStorage.setItem('contacts', JSON.stringify(contacts));
@@ -45,7 +44,6 @@ export const App = () => {
       Notify.success(`You added a new contact: ${newContact.name}`);
     }
 
-    // setContacts(contacts => [newContact, ...contacts]);
     dispatch(newContacts(newContact))
   };
 
@@ -87,7 +85,6 @@ export const App = () => {
       {contacts.contacts.length === 0 ? (
         <Text>Sorry, you don't have any contacts.</Text>
       ) : (
-        // <ContactList data={visibleContacts} deleteContacts={deleteContacts} />
         <ContactList data={contacts.contacts} deleteContacts={deleteContacts}/>
       )}
     </Container>
