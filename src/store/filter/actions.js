@@ -1,3 +1,3 @@
-export const filter = id => {
-    return { payload: id, type: 'filter' };
+export const filtersContacts = name => {
+    return { payload: name, type: 'filter' };
   };
