@@ -1,5 +1,5 @@
 const CardPages = () => {
-    return
+    return <h2>CardPages</h2>
 }
 
 export default CardPages;
