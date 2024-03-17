@@ -1,22 +1,13 @@
-import { useEffect, useState } from 'react';
+import CategoryList from "components/CategoryList/CategoryList";
+import DrugsList from "components/DrugsList/DrugsList";
 
 const ShopPages = () => {
-  const [menu, setMenu] = useState([]);
-
-  useEffect(() => {
-    const getMenu = async () => {
-      try {
-       
-      } catch (error) {}
-    };
-  }, []);
+ 
 
   return (
     <div>
-      <h2>Shops</h2>
-      <div>
-        <ul>{}</ul>
-      </div>
+     <CategoryList/>
+     <DrugsList/>
     </div>
   );
 };

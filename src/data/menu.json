@@ -1,22 +1,22 @@
 [
-    {
-        "category": "drugs",
-        "id": 1,
-        "title": "Drugs 24"
-      },
-      {
-        "category": "pharmacy",
-        "id": 2,
-        "title": "Pharmacy"
-      },
-      {
-        "category": "recept",
-        "id": 3,
-        "title": "Recepte"
-      },
-      {
-        "category": "online",
-        "id": 4,
-        "title": "Online"
-      }
+  {
+    "category": "drugs",
+    "id": 1,
+    "title": "Drugs 24"
+  },
+  {
+    "category": "pharmacy",
+    "id": 2,
+    "title": "Pharmacy"
+  },
+  {
+    "category": "recept",
+    "id": 3,
+    "title": "Recepte"
+  },
+  {
+    "category": "online",
+    "id": 4,
+    "title": "Online"
+  }
 ]
