@@ -1,11 +1,15 @@
-import data from '../../data/menu.json';
-console.log(data);
+// import data from '../../data/menu.json';
+// console.log(data);
 
-const CategoryList = ({ data }) => {
+
+
+const CategoryList = () => {
+
+
   return (
     <div>
       <ul>
-        {data.map(item => (
+        {/* {data.map(item => (
           <li key={item.id}>
             <img src="" alt={`${item.title}`} />
             <div>
@@ -13,12 +17,12 @@ const CategoryList = ({ data }) => {
               <button>add to Card</button>
             </div>
           </li>
-        ))}
+        ))} */}
       </ul>
     </div>
   );
 };
 
-CategoryList(data);
+CategoryList();
 
 export default CategoryList;
