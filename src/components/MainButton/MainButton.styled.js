@@ -53,12 +53,14 @@ export const Button = styled.button`
   align-items: center;
   border-radius: 30px;
 
+  /* font-family: Mulish; */
   font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: -0.08px;
-  border: none;
-  outline: none;
+
+  font-weight: 700;
+  line-height: 24px; 
+  letter-spacing: -0.32px;
+  text-transform: uppercase;
+
   cursor: pointer;
   transition: all 900ms cubic-bezier(0.4, 0, 0.2, 1);
 
