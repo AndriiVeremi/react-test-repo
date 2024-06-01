@@ -32,3 +32,10 @@ li {
 .active {
   color: brown;
 }
+
+.list-studio:hover,
+.list-studio:focus,
+.list-studio:active {
+    font-weight: 700;
+    font-size: 20px;
+}
