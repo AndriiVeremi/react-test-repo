@@ -13,27 +13,29 @@ export const App = () => {
     <Container>
       <MainButton
         type="submit"
-        color="primary"
+        colors="primary"
         size="small"
         onClick={handleSubmit}
       >
-        Search
+        Sign in
       </MainButton>
+
       <MainButton
         type="button"
-        color="secondary"
+        colors="secondary"
         size="medium"
         onClick={handleSubmit}
       >
-        Search
+        Add recipe
       </MainButton>
+
       <MainButton
         type="submit"
-        color="tertiary"
+        colors="tertiary"
         size="large"
         onClick={handleSubmit}
       >
-        Search
+        Publish
       </MainButton>
     </Container>
   );

@@ -15,7 +15,7 @@ const sizes = {
   `,
 };
 
-const color = {
+const colors = {
   primary: css`
     border: 1px solid rgba(5, 5, 5, 0.2);
     background: rgba(5, 5, 5, 0.2);
@@ -52,7 +52,7 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   border-radius: 30px;
-  /* color: #fff; */
+
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -63,10 +63,8 @@ export const Button = styled.button`
   transition: all 900ms cubic-bezier(0.4, 0, 0.2, 1);
 
   ${props => sizes[props.size]}
-  ${props => color[props.color]}
+  ${props => colors[props.colors]}
 `;
-
-
 
 Button.defaultProps = {
   size: 'medium',
