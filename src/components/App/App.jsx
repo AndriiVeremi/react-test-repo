@@ -1,4 +1,5 @@
 import MainButton from 'components/MainButton/MainButton';
+import LoginButton from 'components/LoginButton/LoginButton';
 import { Container } from './App.styled';
 
 
@@ -37,6 +38,9 @@ export const App = () => {
       >
         Publish
       </MainButton>
+
+      <LoginButton/>
+        
     </Container>
   );
 };
