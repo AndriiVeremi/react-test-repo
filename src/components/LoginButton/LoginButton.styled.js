@@ -3,9 +3,11 @@ import styled, { css } from 'styled-components';
 const sizes = {
   small: css`
     width: 80px;
+    height: 38px;
     padding: 10px 16px;
   `,
   large: css`
+    height: 46px;
     width: 104px;
     padding: 14px 28px;
   `,
@@ -27,12 +29,13 @@ const colors = {
 export const BtnWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+
   position: relative;
   width: 208px;
   height: 46px;
   background-color: #fff;
   border-radius: 30px;
+  border: 1px solid #333;
 `;
 
 export const SlideButton = styled.button`
@@ -41,11 +44,14 @@ export const SlideButton = styled.button`
   align-items: center;
   border-radius: 30px;
 
+  color: #fff;
+  /* font-family: Mulish; */
   font-size: 12px;
 
   font-weight: 700;
-  line-height: 24px;
-  letter-spacing: -0.32px;
+  line-height: 18px; 
+  letter-spacing: -0.24px;
+  text-transform: uppercase;
 
   position: absolute;
   transition: transform 0.4s ease;
@@ -58,4 +64,5 @@ export const SlideButton = styled.button`
 
 SlideButton.defaultProps = {
   colors: 'primary',
+  size: 'large',
 };
