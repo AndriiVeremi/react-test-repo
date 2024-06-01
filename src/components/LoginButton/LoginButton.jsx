@@ -15,6 +15,7 @@ const LoginButton = () => {
         position={isSignUpFirst ? 'left' : 'right'}
         onClick={toggleButtons}
         colors={isSignUpFirst ? 'secondary' : 'primary'}
+        size="large"
       >
         Sign up
       </SlideButton>
@@ -22,6 +23,7 @@ const LoginButton = () => {
         position={isSignUpFirst ? 'right' : 'left'}
         onClick={toggleButtons}
         colors={isSignUpFirst ? 'primary' : 'secondary'}
+        size="large"
       >
         Sign in
       </SlideButton>

@@ -1,5 +1,16 @@
 import styled, { css } from 'styled-components';
 
+const sizes = {
+  small: css`
+    width: 80px;
+    padding: 10px 16px;
+  `,
+  large: css`
+    width: 104px;
+    padding: 14px 28px;
+  `,
+};
+
 const colors = {
   primary: css`
     border: none;
@@ -25,14 +36,12 @@ export const BtnWrapper = styled.div`
 `;
 
 export const SlideButton = styled.button`
-  width: 104px;
-  height: 46px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 30px;
 
-  font-size: 16px;
+  font-size: 12px;
 
   font-weight: 700;
   line-height: 24px;
@@ -43,6 +52,7 @@ export const SlideButton = styled.button`
   transform: ${props =>
     props.position === 'left' ? 'translateX(0)' : 'translateX(104px)'};
 
+  ${props => sizes[props.size]}
   ${props => colors[props.colors]}
 `;
 
