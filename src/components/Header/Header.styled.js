@@ -21,12 +21,10 @@ export const TopContainer = styled.div`
   }
 `;
 
-
 export const ContainerBackground = styled.div`
   border-radius: 30px;
   background-color: #050505;
 `;
-
 
 export const HeaderWrapper = styled.div`
   display: flex;

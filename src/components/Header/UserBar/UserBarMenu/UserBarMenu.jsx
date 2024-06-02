@@ -1,10 +1,10 @@
-import { UserBarMenuWrapper } from "./UserBarMenu.styled";
+import { UserBarMenuWrapper, UserBarMenuLink } from './UserBarMenu.styled';
 
 const UserBarMenu = () => {
     return (
       <UserBarMenuWrapper>
-        {/* <a href="">Profile</a>
-        <a href="">Log out <span></span></a> */}
+        <UserBarMenuLink >Profile</UserBarMenuLink>
+        <UserBarMenuLink >Log out <span></span></UserBarMenuLink>
       </UserBarMenuWrapper>
     );
 }
