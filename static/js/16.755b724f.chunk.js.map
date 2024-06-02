@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/16.755b724f.chunk.js","mappings":"yJAAA,MAIA,EAJmBA,KACVC,EAAAA,EAAAA,KAAA,MAAAC,SAAI,c","sources":["pages/RecipePage/RecipePage.jsx"],"sourcesContent":["const RecipePage = () => {\n  return <h1>RecipePage</h1>;\n};\n\nexport default RecipePage;\n"],"names":["RecipePage","_jsx","children"],"sourceRoot":""}

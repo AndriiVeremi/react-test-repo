@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/8.c0262410.chunk.js","mappings":"uJAAA,MAIA,EAJsBA,KACbC,EAAAA,EAAAA,KAAA,MAAAC,SAAI,iB","sources":["pages/AddRecipePage/AddRecipePage.jsx"],"sourcesContent":["const AddRecipePage = () => {\n  return <h1>AddRecipePage</h1>;\n};\n\nexport default AddRecipePage;\n"],"names":["AddRecipePage","_jsx","children"],"sourceRoot":""}

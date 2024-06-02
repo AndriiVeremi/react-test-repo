@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_test_repo=self.webpackChunkreact_test_repo||[]).push([[8],{8:(e,t,s)=>{s.r(t),s.d(t,{default:()=>r});var c=s(496);const r=()=>(0,c.jsx)("h1",{children:"AddRecipePage"})}}]);
+//# sourceMappingURL=8.c0262410.chunk.js.map

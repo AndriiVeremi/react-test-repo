@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_test_repo=self.webpackChunkreact_test_repo||[]).push([[988],{988:(e,s,t)=>{t.r(s),t.d(s,{default:()=>a});var r=t(496);const a=()=>(0,r.jsx)("h1",{children:"UserPage"})}}]);
+//# sourceMappingURL=988.569cfd86.chunk.js.map
