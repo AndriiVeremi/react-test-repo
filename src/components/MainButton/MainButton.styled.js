@@ -124,7 +124,7 @@ export const Button = styled.button`
   }
 
   ${props => sizes[props.size]}
-  ${props => colors[props.colors]}
+  ${props => colors[props.color]}
 `;
 
 Button.defaultProps = {

@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import NavBar from './NavBar/NavBar';
 import AuthBar from './AuthBar/AuthBar';
+import UserBar from './UserBar/UserBar';
 import {
   TopContainer,
   ContainerBackground,
@@ -9,7 +9,8 @@ import {
 } from './Header.styled';
 
 const Header = () => {
-  const [isLogIn, setIsLogIn] = useState(true);
+
+  const isLogIn = true;
 
   return (
     <TopContainer>
@@ -17,7 +18,7 @@ const Header = () => {
         <HeaderWrapper>
           <HeaderLogo href="#">Foodies</HeaderLogo>
           {isLogIn && <NavBar />}
-          {isLogIn ? <AuthBar /> : <AuthBar />}
+          {isLogIn ? <UserBar /> : <AuthBar />}
         </HeaderWrapper>
       </ContainerBackground>
     </TopContainer>
