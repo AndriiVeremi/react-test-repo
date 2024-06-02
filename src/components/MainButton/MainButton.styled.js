@@ -1,32 +1,40 @@
 import styled, { css } from 'styled-components';
 
 const sizes = {
+  tiny: css`
+    width: 101px;
+    height: 44px;
+    /* padding: 14px 28px; */
+  `,
   small: css`
-    width: 146px;
-    padding: 16px 39px;
+    width: 104px;
+    height: 46px;
+    /* padding: 14px 28px; */
   `,
   medium: css`
-    width: 159px;
-    padding: 16px 32px;
+    width: 146px;
+    height: 56px;
+    /* padding: 16px 39px; */
   `,
   large: css`
+    width: 159px;
+    height: 56px;
+    /* padding: 16px 32px; */
+  `,
+  huge: css`
     width: 400px;
-    padding: 16px 171px;
+    height: 56px;
+    /* padding: 16px 171px; */
   `,
 };
 
 const colors = {
-  primary: css`
-    border: 1px solid rgba(5, 5, 5, 0.2);
-    background: rgba(5, 5, 5, 0.2);
-    color: rgba(255, 255, 255, 0.4);
-    &:hover {
-      border: 1px solid #050505;
-      background: #050505;
-      color: #fff;
-    }
+  white: css`
+    border: none;
+    background: none;
+    color: #050505;
   `,
-  secondary: css`
+  clear: css`
     border: 1px solid #050505;
     background: none;
     color: #050505;
@@ -36,7 +44,17 @@ const colors = {
       color: #fff;
     }
   `,
-  tertiary: css`
+  grej: css`
+    border: 1px solid rgba(5, 5, 5, 0.2);
+    background: rgba(5, 5, 5, 0.2);
+    color: rgba(255, 255, 255, 0.4);
+    &:hover {
+      border: 1px solid #050505;
+      background: #050505;
+      color: #fff;
+    }
+  `,
+  black: css`
     border: 1px solid rgba(5, 5, 5, 0.85);
     background: rgba(5, 5, 5, 0.85);
     color: #fff;
@@ -55,9 +73,8 @@ export const Button = styled.button`
 
   /* font-family: Mulish; */
   font-size: 16px;
-
   font-weight: 700;
-  line-height: 24px; 
+  line-height: 24px;
   letter-spacing: -0.32px;
   text-transform: uppercase;
 
@@ -69,6 +86,6 @@ export const Button = styled.button`
 `;
 
 Button.defaultProps = {
-  size: 'medium',
-  colors: 'primary',
+  size: 'tiny',
+  color: 'white',
 };
