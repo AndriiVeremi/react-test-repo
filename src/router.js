@@ -14,9 +14,6 @@ export const ROUTES = {
   RECIPE: '/recipe/:id',
   RECIPE_ADD: '/recipe/add',
   USER: '/user/:id',
-  REGISTER: '/register',
-  LOGIN: '/login',
-  LOGOUT: '/logout',
 };
 
 const routes = [
@@ -43,25 +40,11 @@ const routes = [
       },
       {
         path: ROUTES.USER,
-        element: <PrivateRoute redirectTo={ROUTES.USER} component={UserPage} />,
-      },
-
-      {
-        path: ROUTES.REGISTER,
         element: (
-          <PrivateRoute redirectTo={ROUTES.REGISTER} component={UserPage} />
-        ),
-      },
-      {
-        path: ROUTES.LOGIN,
-        element: (
-          <PrivateRoute redirectTo={ROUTES.LOGIN} component={UserPage} />
-        ),
-      },
-      {
-        path: ROUTES.LOGOUT,
-        element: (
-          <PrivateRoute redirectTo={ROUTES.LOGOUT} component={UserPage} />
+          <PrivateRoute
+            redirectTo={ROUTES.USER}
+            component={UserPage}
+          />
         ),
       },
     ],

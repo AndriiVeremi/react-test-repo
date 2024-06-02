@@ -9,19 +9,39 @@ export const TestBtn = () => {
 
   return (
     <BtnWrapper>
-      <MainButton type="submit" colors="white" size="tiny">
+      <MainButton
+        type="submit"
+        colors="white"
+        size="tiny"
+        onClick={handleSubmit}
+      >
         Sign in
       </MainButton>
 
-      <MainButton type="button" colors="gray" size="huge">
+      <MainButton
+        type="button"
+        colors="gray"
+        size="huge"
+        onClick={handleSubmit}
+      >
         Add recipe
       </MainButton>
 
-      <MainButton type="submit" colors="clear" size="medium">
+      <MainButton
+        type="submit"
+        colors="clear"
+        size="medium"
+        onClick={handleSubmit}
+      >
         Publish
       </MainButton>
 
-      <MainButton type="submit" colors="black" size="large">
+      <MainButton
+        type="submit"
+        colors="black"
+        size="large"
+        onClick={handleSubmit}
+      >
         Publish
       </MainButton>
     </BtnWrapper>
