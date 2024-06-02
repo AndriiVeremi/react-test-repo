@@ -12,29 +12,52 @@ const sizes = {
     /* padding: 14px 28px; */
   `,
   medium: css`
-    width: 146px;
-    height: 56px;
-    /* padding: 16px 39px; */
+    width: 124px;
+    height: 48px;
+    /* padding: 14px 32px; */
+
+    @media (min-width: 768px) {
+      width: 146px;
+      height: 56px;
+      /* padding: 16px 39px; */
+    }
   `,
   large: css`
     width: 159px;
     height: 56px;
     /* padding: 16px 32px; */
   `,
+  big: css`
+    width: 343px;
+    height: 48px;
+    /* padding: 14px 141px; */
+
+    @media (min-width: 768px) {
+      width: 394px;
+      height: 56px;
+      /* padding: 16px 171px; */
+    }
+  `,
   huge: css`
-    width: 400px;
-    height: 56px;
-    /* padding: 16px 171px; */
+    width: 283px;
+    height: 48px;
+    /* padding: 14px 155px; */
+
+    @media (min-width: 768px) {
+      width: 400px;
+      height: 56px;
+      /* padding: 16px 171px; */
+    }
   `,
 };
 
 const colors = {
-  white: css`
+  clear: css`
     border: none;
     background: none;
     color: #050505;
   `,
-  clear: css`
+  white: css`
     border: 1px solid #050505;
     background: none;
     color: #050505;
@@ -44,7 +67,7 @@ const colors = {
       color: #fff;
     }
   `,
-  grej: css`
+  gray: css`
     border: 1px solid rgba(5, 5, 5, 0.2);
     background: rgba(5, 5, 5, 0.2);
     color: rgba(255, 255, 255, 0.4);

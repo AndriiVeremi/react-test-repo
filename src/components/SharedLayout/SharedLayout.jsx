@@ -9,7 +9,7 @@ const SharedLayout = () => {
         Sign in
       </MainButton>
 
-      <MainButton type="button" colors="grej" size="huge">
+      <MainButton type="button" colors="gray" size="huge">
         Add recipe
       </MainButton>
 
