@@ -23,9 +23,15 @@ const sizes = {
     }
   `,
   large: css`
-    width: 159px;
-    height: 56px;
-    /* padding: 16px 32px; */
+    width: 131px;
+    height: 44px;
+    /* padding: 12px 24px; */
+
+    @media (min-width: 768px) {
+      width: 159px;
+      height: 56px;
+      /* padding: 16px 32px; */
+    }
   `,
   big: css`
     width: 343px;
@@ -68,7 +74,7 @@ const colors = {
     }
   `,
   gray: css`
-    border: 1px solid rgba(5, 5, 5, 0.2);
+    border: 1px solid inherit;
     background: rgba(5, 5, 5, 0.2);
     color: rgba(255, 255, 255, 0.4);
     &:hover {
@@ -78,13 +84,18 @@ const colors = {
     }
   `,
   black: css`
-    border: 1px solid rgba(5, 5, 5, 0.85);
+    border: 1px solid inherit;
     background: rgba(5, 5, 5, 0.85);
     color: #fff;
     &:hover {
       border: 1px solid #050505;
       background: #050505;
     }
+  `,
+  blackRev: css`
+    border: 1px solid #fff;
+    background: none;
+    color: #fff;
   `,
 };
 
@@ -93,16 +104,19 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   border-radius: 30px;
-
   /* font-family: Mulish; */
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: -0.32px;
   text-transform: uppercase;
 
   cursor: pointer;
-  transition: all 900ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
 
   ${props => sizes[props.size]}
   ${props => colors[props.colors]}

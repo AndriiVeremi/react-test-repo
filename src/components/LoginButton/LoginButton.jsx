@@ -14,7 +14,7 @@ const LoginButton = () => {
       <SlideButton
         position={isSignUpFirst ? 'left' : 'right'}
         onClick={toggleButtons}
-        colors={isSignUpFirst ? 'white' : 'black'}
+        colors={isSignUpFirst ? 'clear' : 'black'}
         size="tiny"
       >
         Sign up
@@ -22,7 +22,7 @@ const LoginButton = () => {
       <SlideButton
         position={isSignUpFirst ? 'right' : 'left'}
         onClick={toggleButtons}
-        colors={isSignUpFirst ? 'black' : 'white'}
+        colors={isSignUpFirst ? 'black' : 'clear'}
         size="tiny"
       >
         Sign in

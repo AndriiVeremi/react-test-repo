@@ -1,6 +1,5 @@
 import MainButton from 'components/MainButton/MainButton';
-import LoginButton from 'components/LoginButton/LoginButton';
-import BtnWrapper from './TestBtn.styled'
+import {BtnWrapper} from './TestBtn.styled';
 
 export const TestBtn = () => {
   const handleSubmit = e => {
@@ -10,34 +9,21 @@ export const TestBtn = () => {
 
   return (
     <BtnWrapper>
-      <MainButton
-        type="submit"
-        colors="primary"
-        size="small"
-        onClick={handleSubmit}
-      >
+      <MainButton type="submit" colors="white" size="tiny">
         Sign in
       </MainButton>
 
-      <MainButton
-        type="button"
-        colors="secondary"
-        size="medium"
-        onClick={handleSubmit}
-      >
+      <MainButton type="button" colors="gray" size="huge">
         Add recipe
       </MainButton>
 
-      <MainButton
-        type="submit"
-        colors="tertiary"
-        size="large"
-        onClick={handleSubmit}
-      >
+      <MainButton type="submit" colors="clear" size="medium">
         Publish
       </MainButton>
 
-      <LoginButton />
+      <MainButton type="submit" colors="black" size="large">
+        Publish
+      </MainButton>
     </BtnWrapper>
   );
 };
