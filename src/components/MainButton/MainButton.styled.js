@@ -63,6 +63,11 @@ const colors = {
     background: none;
     color: #050505;
   `,
+  clearRev: css`
+    border: none;
+    background: none;
+    color: #fff;
+  `,
   white: css`
     border: 1px solid #050505;
     background: none;

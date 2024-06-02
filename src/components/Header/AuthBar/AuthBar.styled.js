@@ -5,11 +5,11 @@ export const BtnWrapper = styled.div`
   display: flex;
   align-items: center;
   position: relative;
-  width: 208px;
+  width: 206px;
   height: 46px;
   background-color: #fff;
   border-radius: 30px;
-  border: 1px solid #333;
+  /* border: 1px solid #333; */
 `;
 
 export const SlideButton = styled(Button)`

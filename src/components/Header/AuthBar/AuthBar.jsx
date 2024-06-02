@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import { SlideButton, BtnWrapper } from './LoginButton.styled';
+import { SlideButton, BtnWrapper } from './AuthBar.styled';
 
-const LoginButton = () => {
+const AuthBar = () => {
+  const [isSignUpFirst, setIsSignUpFirst] = useState(true);
 
-   const [isSignUpFirst, setIsSignUpFirst] = useState(true);
+  const toggleButtons = () => {
+    setIsSignUpFirst(!isSignUpFirst);
+  };
 
-   const toggleButtons = () => {
-     setIsSignUpFirst(!isSignUpFirst);
-   };
-    
   return (
     <BtnWrapper>
       <SlideButton
@@ -31,4 +30,4 @@ const LoginButton = () => {
   );
 };
 
-export default LoginButton;
+export default AuthBar;
