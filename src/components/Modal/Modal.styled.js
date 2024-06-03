@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { flexCenter } from '../../styles/atomic';
+import theme from '../../styles/theme';
 
 export const Overlay = styled.div`
   position: fixed;
@@ -6,9 +8,7 @@ export const Overlay = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${flexCenter()}
   z-index: 1200;
   background: rgba(18, 20, 23, 0.5);
 `;
@@ -19,5 +19,9 @@ export const ModalContainer = styled.div`
   left: 50%;
   overflow: hidden;
   transform: translate(-50%, -50%);
-  border-radius: 20px;
+  border-radius: ${theme.radii.md};
+  padding: ${theme.spacings[8]} ${theme.spacings[4]};
+  ${theme.mq.tablet} {
+    padding: ${theme.spacings[8]} ${theme.spacings[4]};
+  }
 `;

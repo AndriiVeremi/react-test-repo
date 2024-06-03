@@ -1,8 +1,8 @@
 import { Button } from './MainButton.styled';
 
-const MainButton = ({ children, size, colors, type, onClick }) => {
+const MainButton = ({ children, type, onClick }) => {
   return (
-    <Button type={type} size={size} color={colors} onClick={onClick}>
+    <Button type={type} onClick={onClick}>
       {children}
     </Button>
   );

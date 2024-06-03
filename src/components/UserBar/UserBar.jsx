@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import UserBarMenu from './UserBarMenu/UserBarMenu';
+import UserBarMenu from '../UserBarMenu/UserBarMenu';
+import UserAvatar from 'components/UserAvatar/UserAvatar';
 // import { useDispatch, useSelector } from 'react-redux';
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
 import {
   UserBarWrapper,
-  UserAvatar,
   UserName,
   WrappersIcons,
   MenuWrapper,
@@ -29,9 +29,11 @@ const UserBar = () => {
       <UserBarWrapper>
         <Wrapper>
           <UserAvatar
-            src="https://ftp.goit.study/img/so-yummy/ingredients/640c2dd963a319ea671e37aa.png"
-            alt="avatar"
-            width="50px"
+            src={
+              'https://ftp.goit.study/img/so-yummy/ingredients/640c2dd963a319ea671e37aa.png'
+            }
+            alt={'avatar'}
+            size={[32, 50, 50]}
           />
 
           <WrappersIcons onClick={toggleMenu}>

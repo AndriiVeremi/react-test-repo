@@ -1,6 +1,6 @@
-import MainButton from 'components/MainButton/MainButton';
+// import MainButton from 'components/MainButton/MainButton';
 import { Modal } from 'components/Modal/Modal';
-import { HeaderMenuWrapper } from './NavBar.styled';
+import { NavMenuWrapper, NavButton } from './NavBar.styled';
 import { useState } from 'react';
 
 const NavBar = () => {
@@ -13,24 +13,24 @@ const NavBar = () => {
   
   return (
     <>
-      <HeaderMenuWrapper>
-        <MainButton
+      <NavMenuWrapper>
+        <NavButton
           type="button"
           colors="clearRev"
           size="tiny"
           onClick={() => toggleModal()}
         >
           Home
-        </MainButton>
-        <MainButton
+        </NavButton>
+        <NavButton
           type="button"
           colors="clearRev"
           size="tiny"
           onClick={() => toggleModal()}
         >
           Add recipe
-        </MainButton>
-      </HeaderMenuWrapper>
+        </NavButton>
+      </NavMenuWrapper>
 
       {showModal && (
         <Modal onClose={() => toggleModal()}>

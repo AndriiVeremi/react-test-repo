@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 export const TopContainer = styled.div`
   width: 100%;
@@ -33,20 +32,4 @@ export const HeaderWrapper = styled.div`
   padding: 20px 60px;
 `;
 
-export const HeaderLogo = styled(Link)`
-  color: #fff;
-  /* font-family: Mulish; */
-  font-size: 20px;
-  font-weight: 800;
-  line-height: 24px;
-  letter-spacing: -0.4px;
-  text-transform: lowercase;
-  text-decoration: none;
 
-  @media screen and (min-width: 768px) {
-    font-size: 24px;
-    font-weight: 800;
-    line-height: 28px;
-    letter-spacing: -0.48px;
-  }
-`;
