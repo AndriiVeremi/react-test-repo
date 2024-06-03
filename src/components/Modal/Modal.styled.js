@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { flexCenter } from '../../styles/atomic';
 import theme from '../../styles/theme';
+import { ReactComponent as Close } from '../../../images/icons/close.svg';
 
 export const Overlay = styled.div`
   position: fixed;
@@ -23,5 +24,16 @@ export const ModalContainer = styled.div`
   padding: ${theme.spacings[8]} ${theme.spacings[4]};
   ${theme.mq.tablet} {
     padding: ${theme.spacings[8]} ${theme.spacings[4]};
+  }
+`;
+
+export const BtnClose = styled(Close)`
+  display: flex;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  stroke: #101828;
+  margin-left: auto;
+  margin-bottom: 10px;
+  &:hover {
+    stroke: #e44848;
   }
 `;
